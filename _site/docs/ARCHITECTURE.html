@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Architecture Guide | Tiation Docker Debian</title>
+<meta name="generator" content="Jekyll v3.9.5" />
+<meta property="og:title" content="Architecture Guide" />
+<meta name="author" content="Tiation" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Enterprise-grade Docker Desktop alternative using Debian VMs" />
+<meta property="og:description" content="Enterprise-grade Docker Desktop alternative using Debian VMs" />
+<link rel="canonical" href="http://0.0.0.0:4000/docs/ARCHITECTURE.html" />
+<meta property="og:url" content="http://0.0.0.0:4000/docs/ARCHITECTURE.html" />
+<meta property="og:site_name" content="Tiation Docker Debian" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Architecture Guide" />
+<meta name="twitter:site" content="@tiation" />
+<meta name="twitter:creator" content="@Tiation" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"Tiation"},"description":"Enterprise-grade Docker Desktop alternative using Debian VMs","headline":"Architecture Guide","url":"http://0.0.0.0:4000/docs/ARCHITECTURE.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://0.0.0.0:4000/feed.xml" title="Tiation Docker Debian" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Tiation Docker Debian</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/">Welcome to Tiation Docker Debian</a><a class="page-link" href="/docs/ARCHITECTURE.html">Architecture Guide</a><a class="page-link" href="/docs/INSTALLATION.html">Installation Guide</a><a class="page-link" href="/docs/USAGE.html">Usage Guide</a><a class="page-link" href="/docs/ENTERPRISE_DEPLOYMENT.html">Enterprise Deployment Guide</a><a class="page-link" href="/docs/TROUBLESHOOTING.html">Troubleshooting Guide</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Architecture Guide</h1>
+  </header>
+
+  <div class="post-content">
+    <h1 id="architecture-guide">Architecture Guide</h1>
+
+<h2 id="overview">Overview</h2>
+
+<p>Tiation Docker Debian employs a distributed architecture that separates the Docker Engine from the Docker CLI, providing enhanced security, flexibility, and performance. This document outlines the system architecture, components, and data flow.</p>
+
+<h2 id="system-architecture">System Architecture</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>┌─────────────────────────────────────────────────────────────────────────────────┐
+│                                HOST SYSTEM                                      │
+├─────────────────────────────────────────────────────────────────────────────────┤
+│  ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐            │
+│  │   Docker CLI    │    │  TDD Scripts    │    │  SSH Client     │            │
+│  │                 │    │                 │    │                 │            │
+│  │ • docker build  │    │ • tdd-connect   │    │ • Socket fwd    │            │
+│  │ • docker run    │────│ • tdd-tunnel    │────│ • Port fwd      │            │
+│  │ • docker ps     │    │ • tdd-use       │    │ • Key mgmt      │            │
+│  └─────────────────┘    └─────────────────┘    └─────────────────┘            │
+│                                   │                        │                   │
+│                                   │                        │                   │
+├───────────────────────────────────┼────────────────────────┼───────────────────┤
+│                                   │                        │                   │
+│                            ┌──────▼────────┐       ┌──────▼────────┐          │
+│                            │ Docker Socket │       │  SSH Tunnel   │          │
+│                            │ Forwarding    │       │  (Ports)      │          │
+│                            │               │       │               │          │
+│                            │ unix:///tmp/  │       │ 3000 → 3000   │          │
+│                            │ docker.sock   │       │ 8080 → 8080   │          │
+│                            └──────┬────────┘       └──────┬────────┘          │
+└───────────────────────────────────┼────────────────────────┼───────────────────┘
+                                    │                        │
+                                    │                        │
+                                    │                        │
+┌───────────────────────────────────┼────────────────────────┼───────────────────┐
+│                          DEBIAN VM │                        │                   │
+├───────────────────────────────────┼────────────────────────┼───────────────────┤
+│                                   │                        │                   │
+│  ┌─────────────────┐    ┌─────────▼─────────┐    ┌─────────▼─────────┐        │
+│  │   SSH Server    │    │   Docker Engine   │    │   Containers      │        │
+│  │                 │    │                   │    │                   │        │
+│  │ • sshd          │    │ • dockerd         │    │ • App containers  │        │
+│  │ • Port 22       │    │ • containerd      │    │ • Service ports   │        │
+│  │ • Key auth      │    │ • runc            │    │ • Isolated env    │        │
+│  └─────────────────┘    └───────────────────┘    └───────────────────┘        │
+│                                                                                 │
+└─────────────────────────────────────────────────────────────────────────────────┘
+</code></pre></div></div>
+
+<h2 id="core-components">Core Components</h2>
+
+<h3 id="1-host-system-components">1. Host System Components</h3>
+
+<h4 id="docker-cli">Docker CLI</h4>
+<ul>
+  <li><strong>Purpose</strong>: Provides the familiar Docker command-line interface</li>
+  <li><strong>Location</strong>: Host system (macOS/Linux)</li>
+  <li><strong>Communication</strong>: Communicates with Docker Engine via Unix socket forwarding</li>
+  <li><strong>Benefits</strong>: No changes required to existing Docker workflows</li>
+</ul>
+
+<h4 id="tdd-scripts">TDD Scripts</h4>
+<ul>
+  <li><strong>Purpose</strong>: Orchestrate connections between host and VM</li>
+  <li><strong>Components</strong>:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">tdd-connect</code>: Establishes Docker socket connection</li>
+      <li><code class="language-plaintext highlighter-rouge">tdd-tunnel</code>: Manages SSH port forwarding</li>
+      <li><code class="language-plaintext highlighter-rouge">tdd-use</code>: Switches between different VM architectures</li>
+      <li><code class="language-plaintext highlighter-rouge">tdd-disconnect</code>: Cleanly terminates connections</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="ssh-client">SSH Client</h4>
+<ul>
+  <li><strong>Purpose</strong>: Secure communication channel to VM</li>
+  <li><strong>Features</strong>:
+    <ul>
+      <li>Socket forwarding for Docker API</li>
+      <li>Port forwarding for container services</li>
+      <li>Key-based authentication</li>
+      <li>Connection multiplexing</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="2-debian-vm-components">2. Debian VM Components</h3>
+
+<h4 id="ssh-server">SSH Server</h4>
+<ul>
+  <li><strong>Purpose</strong>: Secure remote access to VM</li>
+  <li><strong>Configuration</strong>:
+    <ul>
+      <li>Key-based authentication only</li>
+      <li>Disabled password authentication</li>
+      <li>Custom port configuration support</li>
+      <li>Connection logging</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="docker-engine">Docker Engine</h4>
+<ul>
+  <li><strong>Purpose</strong>: Container runtime and management</li>
+  <li><strong>Components</strong>:
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">dockerd</code>: Docker daemon</li>
+      <li><code class="language-plaintext highlighter-rouge">containerd</code>: Container runtime</li>
+      <li><code class="language-plaintext highlighter-rouge">runc</code>: Low-level container runtime</li>
+    </ul>
+  </li>
+  <li><strong>Configuration</strong>:
+    <ul>
+      <li>TCP socket disabled (security)</li>
+      <li>Unix socket accessible via SSH forwarding</li>
+      <li>Custom network configurations</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="containers">Containers</h4>
+<ul>
+  <li><strong>Purpose</strong>: Isolated application environments</li>
+  <li><strong>Features</strong>:
+    <ul>
+      <li>Network isolation</li>
+      <li>Resource limits</li>
+      <li>Volume mounting</li>
+      <li>Inter-container communication</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="data-flow">Data Flow</h2>
+
+<h3 id="socket-connection-flow">Socket Connection Flow</h3>
+
+<ol>
+  <li><strong>Initialization</strong>: User executes <code class="language-plaintext highlighter-rouge">tdd-connect arm64</code></li>
+  <li><strong>SSH Connection</strong>: Script establishes SSH connection to VM</li>
+  <li><strong>Socket Forwarding</strong>: SSH forwards Unix socket from VM to host</li>
+  <li><strong>Environment Setup</strong>: <code class="language-plaintext highlighter-rouge">DOCKER_HOST</code> environment variable is configured</li>
+  <li><strong>CLI Communication</strong>: Docker CLI communicates with engine via forwarded socket</li>
+</ol>
+
+<h3 id="port-forwarding-flow">Port Forwarding Flow</h3>
+
+<ol>
+  <li><strong>Tunnel Request</strong>: User executes <code class="language-plaintext highlighter-rouge">tdd-tunnel -p 3000 -p 8080</code></li>
+  <li><strong>SSH Tunneling</strong>: SSH creates port forwarding rules</li>
+  <li><strong>Container Binding</strong>: Containers bind to VM ports</li>
+  <li><strong>Host Access</strong>: Host applications access container services via forwarded ports</li>
+</ol>
+
+<h3 id="multi-architecture-support">Multi-Architecture Support</h3>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Host System
+├── ARM64 Environment
+│   ├── Docker Socket: unix:///tmp/docker-on-debian.sock
+│   ├── VM: debian-arm64
+│   └── Containers: ARM64 images
+└── x86_64 Environment
+    ├── Docker Socket: unix:///tmp/docker-on-debianx64.sock
+    ├── VM: debian-x86_64
+    └── Containers: x86_64 images
+</code></pre></div></div>
+
+<h2 id="security-architecture">Security Architecture</h2>
+
+<h3 id="network-isolation">Network Isolation</h3>
+<ul>
+  <li>VMs run in isolated network segments</li>
+  <li>No direct network access between VMs</li>
+  <li>Host-VM communication only via SSH</li>
+</ul>
+
+<h3 id="authentication">Authentication</h3>
+<ul>
+  <li>SSH key-based authentication</li>
+  <li>No password authentication</li>
+  <li>Key rotation support</li>
+</ul>
+
+<h3 id="container-security">Container Security</h3>
+<ul>
+  <li>Containers run with limited privileges</li>
+  <li>Resource constraints enforced</li>
+  <li>Network policies applied</li>
+</ul>
+
+<h2 id="performance-considerations">Performance Considerations</h2>
+
+<h3 id="socket-optimization">Socket Optimization</h3>
+<ul>
+  <li>Connection multiplexing reduces latency</li>
+  <li>Keep-alive connections minimize overhead</li>
+  <li>Batch operations when possible</li>
+</ul>
+
+<h3 id="resource-management">Resource Management</h3>
+<ul>
+  <li>VM memory allocation based on workload</li>
+  <li>CPU limits prevent resource contention</li>
+  <li>Disk I/O optimization for container storage</li>
+</ul>
+
+<h2 id="monitoring-and-observability">Monitoring and Observability</h2>
+
+<h3 id="vm-monitoring">VM Monitoring</h3>
+<ul>
+  <li>Resource utilization tracking</li>
+  <li>Connection status monitoring</li>
+  <li>Performance metrics collection</li>
+</ul>
+
+<h3 id="container-monitoring">Container Monitoring</h3>
+<ul>
+  <li>Container health checks</li>
+  <li>Resource usage monitoring</li>
+  <li>Log aggregation</li>
+</ul>
+
+<h2 id="scalability">Scalability</h2>
+
+<h3 id="horizontal-scaling">Horizontal Scaling</h3>
+<ul>
+  <li>Multiple VMs per host</li>
+  <li>Load balancing across VMs</li>
+  <li>Distributed container orchestration</li>
+</ul>
+
+<h3 id="vertical-scaling">Vertical Scaling</h3>
+<ul>
+  <li>Dynamic resource allocation</li>
+  <li>Auto-scaling based on demand</li>
+  <li>Resource limit adjustments</li>
+</ul>
+
+<h2 id="disaster-recovery">Disaster Recovery</h2>
+
+<h3 id="backup-strategy">Backup Strategy</h3>
+<ul>
+  <li>VM snapshot capabilities</li>
+  <li>Container image backup</li>
+  <li>Configuration backup</li>
+</ul>
+
+<h3 id="recovery-procedures">Recovery Procedures</h3>
+<ul>
+  <li>Automated VM recovery</li>
+  <li>Container state restoration</li>
+  <li>Configuration rollback</li>
+</ul>
+
+<h2 id="integration-points">Integration Points</h2>
+
+<h3 id="cicd-integration">CI/CD Integration</h3>
+<ul>
+  <li>Automated VM provisioning</li>
+  <li>Container build pipelines</li>
+  <li>Testing environment setup</li>
+</ul>
+
+<h3 id="development-workflow">Development Workflow</h3>
+<ul>
+  <li>IDE integration</li>
+  <li>Debugging capabilities</li>
+  <li>Live reload support</li>
+</ul>
+
+<h2 id="future-enhancements">Future Enhancements</h2>
+
+<h3 id="planned-features">Planned Features</h3>
+<ul>
+  <li>Kubernetes integration</li>
+  <li>Container orchestration</li>
+  <li>Advanced networking</li>
+  <li>Multi-cloud support</li>
+</ul>
+
+<h3 id="performance-improvements">Performance Improvements</h3>
+<ul>
+  <li>Faster VM startup</li>
+  <li>Optimized networking</li>
+  <li>Enhanced caching</li>
+</ul>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Tiation Docker Debian</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Tiation</li><li><a class="u-email" href="mailto:tiatheone@protonmail.com">tiatheone@protonmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Enterprise-grade Docker Desktop alternative using Debian VMs</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
