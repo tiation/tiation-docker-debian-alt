@@ -1,0 +1,30 @@
+title: Tiation Docker Debian
+description: Enterprise-grade, open-source solution for using Docker on Debian
+url: https://tiation.github.io/tiation-docker-debian
+baseurl: /tiation-docker-debian
+
+# Build settings
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Site settings
+author:
+  name: Tiation Team
+  email: tiatheone@protonmail.com
+
+# GitHub Pages settings
+repository: tiation/tiation-docker-debian
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

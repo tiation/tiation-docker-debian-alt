@@ -1,0 +1,85 @@
+# GitHub Pages Configuration for Tiation Docker Debian
+
+# Site settings
+title: "Tiation Docker Debian"
+description: "Enterprise-grade Docker Desktop alternative using Debian VMs"
+author: "Tiation"
+email: "tiatheone@protonmail.com"
+url: "https://tiation.github.io"
+baseurl: "/tiation-docker-debian"
+
+# Build settings
+theme: minima
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Navigation
+header_pages:
+  - index.md
+  - docs/ARCHITECTURE.md
+  - docs/INSTALLATION.md
+  - docs/USAGE.md
+  - docs/ENTERPRISE_DEPLOYMENT.md
+  - docs/TROUBLESHOOTING.md
+
+# Collections
+collections:
+  docs:
+    output: true
+    permalink: /:collection/:name/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "docs"
+    values:
+      layout: "page"
+
+# SEO
+twitter:
+  username: tiation
+  card: summary_large_image
+
+facebook:
+  app_id: 
+  publisher: 
+
+social:
+  name: Tiation
+  links:
+    - https://github.com/tiation
+    - https://twitter.com/tiation
+
+# Google Analytics
+google_analytics: # Add your tracking ID here
+
+# Repository
+repository: "tiation/tiation-docker-debian"
+
+# Footer
+footer_text: "Made with ❤️ by Tiation"
+
+# Exclude from processing
+exclude:
+  - "*.sh"
+  - "tdd-*"
+  - "node_modules"
+  - "vendor"
+  - "Gemfile*"
+  - "*.gemspec"
+  - "README.md"

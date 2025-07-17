@@ -1,3 +1,8 @@
+---
+layout: page
+title: Architecture Guide
+---
+
 # Architecture Guide
 
 ## Overview

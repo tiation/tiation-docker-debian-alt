@@ -1,3 +1,8 @@
+---
+layout: page
+title: Enterprise Deployment Guide
+---
+
 # Enterprise Deployment Guide
 
 ## Deployment Options
