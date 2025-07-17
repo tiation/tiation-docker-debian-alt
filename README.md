@@ -267,7 +267,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Support
 
-- **Documentation**: [github.com/tiation](https://github.com/tiation/docker-debian)
+- **Documentation**: [github.com/tiation](https://github.com/tiation/tiation-docker-debian)
 - **Issues**: [GitHub Issues](https://github.com/tiation/tiation-docker-debian/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/tiation/tiation-docker-debian/discussions)
 - **Enterprise Support**: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
