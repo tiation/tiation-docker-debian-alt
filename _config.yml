@@ -9,7 +9,7 @@ url: "https://tiation.github.io"
 baseurl: "/tiation-docker-debian"
 
 # Build settings
-theme: minima
+remote_theme: tiation/tiation-github-pages-theme
 markdown: kramdown
 highlighter: rouge
 plugins:
