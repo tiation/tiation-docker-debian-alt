@@ -1,7 +1,7 @@
 # 🌟 tiation-docker-debian
 
 <div align="center">
-  <img src="assets/hero-banner.png" alt="tiation-docker-debian - Enterprise Grade Solution" width="100%">
+  <img src="assets/hero-banner.svg" alt="tiation-docker-debian - Enterprise Grade Solution" width="100%">
 </div>
 
 <div align="center">
@@ -20,7 +20,7 @@
 Enterprise Docker containers for Debian-based systems with professional deployment guides - An enterprise-grade solution featuring a dark neon theme with cyan/magenta gradient accents, designed for professional deployment and scalability.
 
 <div align="center">
-  <img src="assets/overview-demo.png" alt="Project Overview" width="80%">
+  <img src="assets/overview-demo.svg" alt="Project Overview" width="80%">
 </div>
 
 ---
@@ -31,24 +31,24 @@ Enterprise Docker containers for Debian-based systems with professional deployme
   <tr>
     <td width="50%">
       <h3>🎯 Core Functionality</h3>
-      <img src="assets/feature-core.png" alt="Core Features" width="100%">
+      <img src="assets/feature-core.svg" alt="Core Features" width="100%">
       <p>Enterprise-grade core features with optimized performance</p>
     </td>
     <td width="50%">
       <h3>🎨 Dark Neon Theme</h3>
-      <img src="assets/feature-theme.png" alt="Dark Neon Theme" width="100%">
+      <img src="assets/feature-theme.svg" alt="Dark Neon Theme" width="100%">
       <p>Professional dark theme with cyan/magenta gradient accents</p>
     </td>
   </tr>
   <tr>
     <td width="50%">
       <h3>🔒 Enterprise Security</h3>
-      <img src="assets/feature-security.png" alt="Security Features" width="100%">
+      <img src="assets/feature-security.svg" alt="Security Features" width="100%">
       <p>Built-in security features and compliance standards</p>
     </td>
     <td width="50%">
       <h3>📱 Responsive Design</h3>
-      <img src="assets/feature-responsive.png" alt="Responsive Design" width="100%">
+      <img src="assets/feature-responsive.svg" alt="Responsive Design" width="100%">
       <p>Optimized for all devices and screen sizes</p>
     </td>
   </tr>
@@ -60,7 +60,7 @@ Enterprise Docker containers for Debian-based systems with professional deployme
 
 <div align="center">
   <a href="https://tiaastor.github.io/tiation-docker-debian" target="_blank">
-    <img src="assets/demo-preview.png" alt="Live Demo Preview" width="80%">
+    <img src="assets/demo-preview.svg" alt="Live Demo Preview" width="80%">
   </a>
   <br>
   <a href="https://tiaastor.github.io/tiation-docker-debian" target="_blank">
@@ -73,7 +73,7 @@ Enterprise Docker containers for Debian-based systems with professional deployme
 ## 🏗️ Architecture
 
 <div align="center">
-  <img src="assets/architecture-diagram.png" alt="System Architecture" width="90%">
+  <img src="assets/architecture-diagram.svg" alt="System Architecture" width="90%">
 </div>
 
 ### System Components
@@ -116,7 +116,7 @@ npm run build
 ### Development Workflow
 
 <div align="center">
-  <img src="assets/development-workflow.png" alt="Development Workflow" width="70%">
+  <img src="assets/development-workflow.svg" alt="Development Workflow" width="70%">
 </div>
 
 ---
@@ -126,19 +126,19 @@ npm run build
 ### Desktop Interface
 
 <div align="center">
-  <img src="assets/desktop-interface.png" alt="Desktop Interface" width="100%">
+  <img src="assets/desktop-interface.svg" alt="Desktop Interface" width="100%">
 </div>
 
 ### Mobile Interface
 
 <div align="center">
-  <img src="assets/mobile-interface.png" alt="Mobile Interface" width="60%">
+  <img src="assets/mobile-interface.svg" alt="Mobile Interface" width="60%">
 </div>
 
 ### Dark Neon Theme
 
 <div align="center">
-  <img src="assets/dark-neon-theme.png" alt="Dark Neon Theme" width="100%">
+  <img src="assets/dark-neon-theme.svg" alt="Dark Neon Theme" width="100%">
 </div>
 
 ---
@@ -146,7 +146,7 @@ npm run build
 ## 🛠️ Technology Stack
 
 <div align="center">
-  <img src="assets/tech-stack.png" alt="Technology Stack" width="80%">
+  <img src="assets/tech-stack.svg" alt="Technology Stack" width="80%">
 </div>
 
 - **Containers**: Docker, Docker Compose
@@ -158,7 +158,7 @@ npm run build
 ## 📊 Performance Metrics
 
 <div align="center">
-  <img src="assets/performance-metrics.png" alt="Performance Metrics" width="90%">
+  <img src="assets/performance-metrics.svg" alt="Performance Metrics" width="90%">
 </div>
 
 - **Load Time**: < 2 seconds
@@ -181,7 +181,7 @@ NODE_ENV=development
 ### Configuration Setup
 
 <div align="center">
-  <img src="assets/configuration-setup.png" alt="Configuration Setup" width="70%">
+  <img src="assets/configuration-setup.svg" alt="Configuration Setup" width="70%">
 </div>
 
 ---
@@ -190,7 +190,7 @@ NODE_ENV=development
 
 <div align="center">
   <a href="https://github.com/tiaastor/tiation-docker-debian/wiki" target="_blank">
-    <img src="assets/documentation-preview.png" alt="Documentation Preview" width="80%">
+    <img src="assets/documentation-preview.svg" alt="Documentation Preview" width="80%">
   </a>
   <br>
   <a href="https://github.com/tiaastor/tiation-docker-debian/wiki" target="_blank">
@@ -212,7 +212,7 @@ NODE_ENV=development
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
 <div align="center">
-  <img src="assets/contribution-workflow.png" alt="Contribution Workflow" width="70%">
+  <img src="assets/contribution-workflow.svg" alt="Contribution Workflow" width="70%">
 </div>
 
 ### Development Setup
@@ -237,7 +237,7 @@ git push origin feature/amazing-feature
 ## 🧪 Testing
 
 <div align="center">
-  <img src="assets/testing-dashboard.png" alt="Testing Dashboard" width="80%">
+  <img src="assets/testing-dashboard.svg" alt="Testing Dashboard" width="80%">
 </div>
 
 ```bash
@@ -256,7 +256,7 @@ npm run test:e2e
 ## 🚀 Deployment
 
 <div align="center">
-  <img src="assets/deployment-pipeline.png" alt="Deployment Pipeline" width="90%">
+  <img src="assets/deployment-pipeline.svg" alt="Deployment Pipeline" width="90%">
 </div>
 
 ### Production Deployment
@@ -274,7 +274,7 @@ npm run deploy
 ## 📈 Roadmap
 
 <div align="center">
-  <img src="assets/roadmap.png" alt="Project Roadmap" width="90%">
+  <img src="assets/roadmap.svg" alt="Project Roadmap" width="90%">
 </div>
 
 - [x] Core functionality
@@ -289,7 +289,7 @@ npm run deploy
 ## 📞 Support & Contact
 
 <div align="center">
-  <img src="assets/support-channels.png" alt="Support Channels" width="70%">
+  <img src="assets/support-channels.svg" alt="Support Channels" width="70%">
 </div>
 
 - 📧 **Enterprise Support**: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
@@ -308,7 +308,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 🌟 Acknowledgments
 
 <div align="center">
-  <img src="assets/acknowledgments.png" alt="Acknowledgments" width="60%">
+  <img src="assets/acknowledgments.svg" alt="Acknowledgments" width="60%">
 </div>
 
 - Enterprise-grade development standards
@@ -327,7 +327,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <div align="center">
-  <img src="assets/footer-banner.png" alt="Tiation Enterprise Solutions" width="100%">
+  <img src="assets/footer-banner.svg" alt="Tiation Enterprise Solutions" width="100%">
   
   **⭐ Star this repository if you find it helpful! ⭐**
   
