@@ -1,15 +1,20 @@
-# Project Name
+# 🐳 Tiation Docker Debian
 
 <!-- Hero Image with Dark Neon Theme -->
 <div align="center">
-  <img src=".screenshots/hero-banner.png" alt="Project Hero Banner" width="100%">
+  <img src=".screenshots/hero-banner.png" alt="Tiation Docker Debian - Enterprise Container Platform" width="100%">
 </div>
 
 <div align="center">
   
+[![Build Status](https://img.shields.io/badge/Build-Passing-00FF88?style=for-the-badge&logo=docker&logoColor=white)](https://github.com/TiaAstor/tiation-docker-debian/actions)
+[![Docker](https://img.shields.io/badge/Docker-Enterprise-00D9FF?style=for-the-badge&logo=docker&logoColor=white)](https://hub.docker.com/r/tiaastor/tiation-docker-debian)
+[![Deployment](https://img.shields.io/badge/Deployment-Production-00FF88?style=for-the-badge&logo=kubernetes&logoColor=white)](https://tiaastor.github.io/tiation-docker-debian)
 [![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://tiaastor.github.io/tiation-docker-debian)
 [![Documentation](https://img.shields.io/badge/Documentation-Complete-00FF88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/TiaAstor/tiation-docker-debian/wiki)
 [![License](https://img.shields.io/badge/License-MIT-FF0080?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
+[![Security](https://img.shields.io/badge/Security-Hardened-00FF88?style=for-the-badge&logo=security&logoColor=white)](https://github.com/TiaAstor/tiation-docker-debian/security)
+[![Architecture](https://img.shields.io/badge/Architecture-Documented-FFE500?style=for-the-badge&logo=architecture&logoColor=white)](https://github.com/TiaAstor/tiation-docker-debian/wiki/Architecture)
 
 </div>
 

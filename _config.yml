@@ -1,88 +1,110 @@
-# GitHub Pages Configuration for Tiation Docker Debian
+# GitHub Pages Configuration for tiation-docker-debian
+# Dark Neon Theme with Cyan Gradient Flares
 
-# Site settings
-title: "Tiation Docker Debian"
-description: "Enterprise-grade Docker Desktop alternative using Debian VMs"
-author: "Tiation"
-email: "tiatheone@protonmail.com"
-url: "https://tiation.github.io"
+title: "tiation docker debian"
+description: "Enterprise-grade solution with professional documentation and dark neon theme"
 baseurl: "/tiation-docker-debian"
+url: "https://tiaastor.github.io"
 
-# Build settings
-remote_theme: tiation/tiation-github-pages-theme
-
-# Dark neon theme configuration
-color_scheme: dark
-markdown: kramdown
-highlighter: rouge
+# Theme Configuration
+theme: jekyll-theme-cayman
 plugins:
-  - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-feed
+
+# SEO and Social
+author:
+  name: "Tia Astor"
+  email: "tia@tiation.com"
+  github: "TiaAstor"
+
+social:
+  github: "TiaAstor"
+  twitter: "TiaAstor"
+
+# GitHub Pages Settings
+repository: "TiaAstor/tiation-docker-debian"
+github_username: "TiaAstor"
 
 # Navigation
-header_pages:
-  - index.md
-  - docs/ARCHITECTURE.md
-  - docs/INSTALLATION.md
-  - docs/USAGE.md
-  - docs/ENTERPRISE_DEPLOYMENT.md
-  - docs/TROUBLESHOOTING.md
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Documentation"
+    url: "/docs/"
+  - title: "API Reference"
+    url: "/api/"
+  - title: "GitHub"
+    url: "https://github.com/TiaAstor/tiation-docker-debian"
+
+# Markdown Settings
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: 'highlight'
+    span:
+      line_numbers: false
+    block:
+      line_numbers: true
+
+# Exclude from processing
+exclude:
+  - node_modules/
+  - vendor/
+  - .bundle/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - README_OLD.md
+  - scripts/
+  - .git/
+  - .github/
+
+# Include
+include:
+  - .htaccess
+  - _pages
+  - docs/
+  - api/
 
 # Collections
 collections:
   docs:
     output: true
     permalink: /:collection/:name/
+  examples:
+    output: true
+    permalink: /:collection/:name/
 
-# Default layouts
+# Default settings
 defaults:
   - scope:
       path: ""
       type: "pages"
     values:
-      layout: "page"
+      layout: "default"
+      author: "Tia Astor"
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      author: "Tia Astor"
   - scope:
       path: ""
       type: "docs"
     values:
-      layout: "page"
+      layout: "doc"
+      nav: true
 
-# SEO
-twitter:
-  username: tiation
-  card: summary_large_image
-
-facebook:
-  app_id: 
-  publisher: 
-
-social:
-  name: Tiation
-  links:
-    - https://github.com/tiation
-    - https://twitter.com/tiation
-
-# Google Analytics
-google_analytics: # Add your tracking ID here
-
-# Repository
-repository: "tiation/tiation-docker-debian"
-
-# Footer
-footer_text: "Made with ❤️ by Tiation"
-
-# Exclude from processing
-exclude:
-  - "*.sh"
-  - "tdd-*"
-  - "node_modules"
-  - "vendor"
-  - "Gemfile*"
-  - "*.gemspec"
-  - "README.md"
+# Custom variables
+custom:
+  theme_color: "#00D9FF"
+  accent_color: "#FF0080"
+  background_color: "#0A0A0A"
+  text_color: "#FFFFFF"
+  highlight_color: "#00FF88"
