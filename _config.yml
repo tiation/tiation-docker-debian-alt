@@ -10,6 +10,9 @@ baseurl: "/tiation-docker-debian"
 
 # Build settings
 remote_theme: tiation/tiation-github-pages-theme
+
+# Dark neon theme configuration
+color_scheme: dark
 markdown: kramdown
 highlighter: rouge
 plugins:
