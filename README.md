@@ -1,61 +1,106 @@
 # 🌟 tiation-docker-debian
 
 <div align="center">
+  <img src="assets/hero-banner.png" alt="tiation-docker-debian - Enterprise Grade Solution" width="100%">
+</div>
 
-![Tiation Ecosystem](https://img.shields.io/badge/🔮_TIATION_ECOSYSTEM-tiation_docker_debian-00FFFF?style=for-the-badge&labelColor=0A0A0A&color=00FFFF)
+<div align="center">
 
-**Enterprise-grade solution in the Tiation ecosystem**
-
-*Professional • Scalable • Mission-Driven*
-
-[![🌐_Live_Demo](https://img.shields.io/badge/🌐_Live_Demo-View_Project-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/tiation-docker-debian)
-[![📚_Documentation](https://img.shields.io/badge/📚_Documentation-Complete-007FFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/tiation-docker-debian)
-[![⚡_Status](https://img.shields.io/badge/⚡_Status-Active_Development-FF00FF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/tiation-docker-debian)
-[![📄_License](https://img.shields.io/badge/📄_License-MIT-00FFFF?style=flat-square&labelColor=0A0A0A)](https://github.com/tiation/tiation-docker-debian)
+[![Build Status](https://img.shields.io/badge/Build-Passing-00FF88?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/tiaastor/tiation-docker-debian/actions)
+[![Enterprise Grade](https://img.shields.io/badge/Enterprise-Grade-00D9FF?style=for-the-badge&logo=shield&logoColor=white)](https://github.com/tiaastor/tiation-docker-debian)
+[![Dark Neon Theme](https://img.shields.io/badge/Theme-Dark%20Neon-FF0080?style=for-the-badge&logo=palette&logoColor=white)](https://github.com/tiaastor/tiation-docker-debian)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://tiaastor.github.io/tiation-docker-debian)
+[![Documentation](https://img.shields.io/badge/Documentation-Complete-00FF88?style=for-the-badge&logo=gitbook&logoColor=white)](https://github.com/tiaastor/tiation-docker-debian/wiki)
+[![License](https://img.shields.io/badge/License-MIT-FF0080?style=for-the-badge&logo=opensourceinitiative&logoColor=white)](LICENSE)
 
 </div>
 
----
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Build Status](https://img.shields.io/badge/Build-Passing-00FF88?style=for-the-badge&logo=github-actions&logoColor=white)](https://github.com/tiation/tiation-docker-debian/actions)
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-00D9FF?style=for-the-badge&logo=github&logoColor=white)](https://tiation.github.io/tiation-docker-debian)
-[![Terminal](https://img.shields.io/badge/Terminal-Dark%20Neon-cyan)](https://github.com/tiation)
-
-![tiation-docker-debian Banner](assets/banner.png)
-
 ## 🚀 Overview
 
-Enterprise-grade [description of what this project does]. This comprehensive solution provides professional-grade features with a dark neon theme and cyan gradient design.
+Enterprise Docker containers for Debian-based systems with professional deployment guides - An enterprise-grade solution featuring a dark neon theme with cyan/magenta gradient accents, designed for professional deployment and scalability.
 
-### 🌐 Live Demo & Documentation
+<div align="center">
+  <img src="assets/overview-demo.png" alt="Project Overview" width="80%">
+</div>
 
-- **🎯 Live Site**: [https://tiation.github.io/tiation-docker-debian/](https://tiation.github.io/tiation-docker-debian/)
-- **📚 Wiki Documentation**: [docs/wiki/](docs/wiki/)
-- **🔧 Installation Guide**: [docs/wiki/Installation.md](docs/wiki/Installation.md)
+---
 
-## 📋 Table of Contents
+## ✨ Features
 
-- [🔧 Installation](#-installation)
-- [✨ Features](#-features)
-- [🏗️ Architecture](#️-architecture)
-- [📊 Performance](#-performance)
-- [🔒 Security](#-security)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
+<table>
+  <tr>
+    <td width="50%">
+      <h3>🎯 Core Functionality</h3>
+      <img src="assets/feature-core.png" alt="Core Features" width="100%">
+      <p>Enterprise-grade core features with optimized performance</p>
+    </td>
+    <td width="50%">
+      <h3>🎨 Dark Neon Theme</h3>
+      <img src="assets/feature-theme.png" alt="Dark Neon Theme" width="100%">
+      <p>Professional dark theme with cyan/magenta gradient accents</p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%">
+      <h3>🔒 Enterprise Security</h3>
+      <img src="assets/feature-security.png" alt="Security Features" width="100%">
+      <p>Built-in security features and compliance standards</p>
+    </td>
+    <td width="50%">
+      <h3>📱 Responsive Design</h3>
+      <img src="assets/feature-responsive.png" alt="Responsive Design" width="100%">
+      <p>Optimized for all devices and screen sizes</p>
+    </td>
+  </tr>
+</table>
 
-## 🔧 Installation
+---
+
+## 🎨 Live Demo
+
+<div align="center">
+  <a href="https://tiaastor.github.io/tiation-docker-debian" target="_blank">
+    <img src="assets/demo-preview.png" alt="Live Demo Preview" width="80%">
+  </a>
+  <br>
+  <a href="https://tiaastor.github.io/tiation-docker-debian" target="_blank">
+    <img src="https://img.shields.io/badge/🔗%20View%20Live%20Demo-00D9FF?style=for-the-badge&logo=github&logoColor=white" alt="View Live Demo">
+  </a>
+</div>
+
+---
+
+## 🏗️ Architecture
+
+<div align="center">
+  <img src="assets/architecture-diagram.png" alt="System Architecture" width="90%">
+</div>
+
+### System Components
+
+- **Frontend**: Modern framework with dark neon theme
+- **Backend**: Enterprise-grade API with authentication
+- **Database**: Scalable data storage solution
+- **Security**: Enterprise compliance and security features
+
+---
+
+## 🚀 Quick Start
 
 ### Prerequisites
 
-- Node.js 18.0 or later
-- npm 8.0 or later
-- Git
+```bash
+# Verify prerequisites
+node --version  # >= 18.0.0
+npm --version   # >= 8.0.0
+git --version   # >= 2.0.0
+```
 
-### Quick Start
+### Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/tiation/tiation-docker-debian.git
+git clone https://github.com/tiaastor/tiation-docker-debian.git
 cd tiation-docker-debian
 
 # Install dependencies
@@ -68,109 +113,227 @@ npm run dev
 npm run build
 ```
 
-## ✨ Features
+### Development Workflow
 
-### Core Features
+<div align="center">
+  <img src="assets/development-workflow.png" alt="Development Workflow" width="70%">
+</div>
 
-- 🎨 **Dark Neon Theme**: Professional dark theme with cyan gradient
-- ⚡ **High Performance**: Optimized for speed and efficiency
-- 🔒 **Enterprise Security**: Built-in security features
-- 📱 **Responsive Design**: Works on all devices
-- 🌐 **GitHub Pages**: Automated deployment
-- 📚 **Comprehensive Docs**: Complete documentation
+---
 
-### Architecture Diagram
+## 📱 Screenshots
 
-```
-┌─────────────────┐     ┌─────────────────┐
-│   Frontend      │────►│   Backend       │
-│   (React/Vue)   │     │   (Node.js)     │
-└─────────────────┘     └─────────────────┘
-        │                       │
-        └───────────────────────┘
-               │
-        ┌─────────────────┐
-        │   Database      │
-        │   (PostgreSQL)  │
-        └─────────────────┘
-```
+### Desktop Interface
 
-## 🏗️ Architecture
+<div align="center">
+  <img src="assets/desktop-interface.png" alt="Desktop Interface" width="100%">
+</div>
 
-### System Components
+### Mobile Interface
 
-- **Frontend**: Modern framework with responsive design
-- **Backend**: RESTful API with authentication
-- **Database**: Scalable data storage
-- **Security**: Enterprise-grade security features
+<div align="center">
+  <img src="assets/mobile-interface.png" alt="Mobile Interface" width="60%">
+</div>
 
-## 📊 Performance
+### Dark Neon Theme
 
-### Metrics
+<div align="center">
+  <img src="assets/dark-neon-theme.png" alt="Dark Neon Theme" width="100%">
+</div>
+
+---
+
+## 🛠️ Technology Stack
+
+<div align="center">
+  <img src="assets/tech-stack.png" alt="Technology Stack" width="80%">
+</div>
+
+- **Containers**: Docker, Docker Compose
+- **OS**: Debian, Ubuntu
+- **Orchestration**: Kubernetes, Docker Swarm
+
+---
+
+## 📊 Performance Metrics
+
+<div align="center">
+  <img src="assets/performance-metrics.png" alt="Performance Metrics" width="90%">
+</div>
 
 - **Load Time**: < 2 seconds
-- **Bundle Size**: < 500KB
+- **Bundle Size**: Optimized
 - **Lighthouse Score**: 95+
 - **Test Coverage**: 90%+
 
-## 🔒 Security
+---
 
-### Security Features
+## 🔧 Configuration
 
-1. **Input Validation**: All inputs are validated and sanitized
-2. **Authentication**: Secure user authentication
-3. **Authorization**: Role-based access control
-4. **Data Protection**: Encryption in transit and at rest
+### Environment Variables
+
+```env
+# Copy to .env.local
+NODE_ENV=development
+# Add project-specific variables
+```
+
+### Configuration Setup
+
+<div align="center">
+  <img src="assets/configuration-setup.png" alt="Configuration Setup" width="70%">
+</div>
+
+---
+
+## 📚 Documentation
+
+<div align="center">
+  <a href="https://github.com/tiaastor/tiation-docker-debian/wiki" target="_blank">
+    <img src="assets/documentation-preview.png" alt="Documentation Preview" width="80%">
+  </a>
+  <br>
+  <a href="https://github.com/tiaastor/tiation-docker-debian/wiki" target="_blank">
+    <img src="https://img.shields.io/badge/📖%20Full%20Documentation-00FF88?style=for-the-badge&logo=gitbook&logoColor=white" alt="Full Documentation">
+  </a>
+</div>
+
+### Quick Links
+
+- [📘 User Guide](docs/user-guide.md)
+- [🔧 API Reference](docs/api-reference.md)
+- [🏗️ Architecture Guide](docs/architecture.md)
+- [🚀 Deployment Guide](docs/deployment.md)
+
+---
 
 ## 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
 
+<div align="center">
+  <img src="assets/contribution-workflow.png" alt="Contribution Workflow" width="70%">
+</div>
+
 ### Development Setup
 
 ```bash
-# Fork and clone the repository
-git clone https://github.com/yourusername/tiation-docker-debian.git
+# Fork the repository
+git clone https://github.com/your-username/tiation-docker-debian.git
+cd tiation-docker-debian
 
 # Create feature branch
-git checkout -b feature/new-feature
+git checkout -b feature/amazing-feature
 
 # Make changes and commit
-git commit -m "feat: add new feature"
+git commit -m "feat: add amazing feature"
 
-# Push and create pull request
-git push origin feature/new-feature
+# Push to branch
+git push origin feature/amazing-feature
 ```
+
+---
+
+## 🧪 Testing
+
+<div align="center">
+  <img src="assets/testing-dashboard.png" alt="Testing Dashboard" width="80%">
+</div>
+
+```bash
+# Run all tests
+npm test
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run end-to-end tests
+npm run test:e2e
+```
+
+---
+
+## 🚀 Deployment
+
+<div align="center">
+  <img src="assets/deployment-pipeline.png" alt="Deployment Pipeline" width="90%">
+</div>
+
+### Production Deployment
+
+```bash
+# Build for production
+npm run build
+
+# Deploy to GitHub Pages
+npm run deploy
+```
+
+---
+
+## 📈 Roadmap
+
+<div align="center">
+  <img src="assets/roadmap.png" alt="Project Roadmap" width="90%">
+</div>
+
+- [x] Core functionality
+- [x] Dark neon theme implementation
+- [x] Enterprise-grade documentation
+- [ ] Advanced features
+- [ ] Mobile optimization
+- [ ] Third-party integrations
+
+---
+
+## 📞 Support & Contact
+
+<div align="center">
+  <img src="assets/support-channels.png" alt="Support Channels" width="70%">
+</div>
+
+- 📧 **Enterprise Support**: [tiatheone@protonmail.com](mailto:tiatheone@protonmail.com)
+- 🐛 **Issues**: [GitHub Issues](https://github.com/tiaastor/tiation-docker-debian/issues)
+- 📖 **Documentation**: [Wiki](https://github.com/tiaastor/tiation-docker-debian/wiki)
+- 🔗 **GitHub**: [Repository](https://github.com/tiaastor/tiation-docker-debian)
+
+---
 
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+---
+
+## 🌟 Acknowledgments
+
+<div align="center">
+  <img src="assets/acknowledgments.png" alt="Acknowledgments" width="60%">
+</div>
+
+- Enterprise-grade development standards
+- Open-source community contributions
+- Dark neon theme inspiration
+
+---
+
 ## 🔗 Related Projects
 
-- [Tiation Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows)
-- [Tiation Docker Debian](https://github.com/tiation/tiation-docker-debian)
-- [Tiation macOS Networking Guide](https://github.com/tiation/tiation-macos-networking-guide)
+- [Tiation Terminal Workflows](https://github.com/tiaastor/tiation-terminal-workflows)
+- [Tiation Docker Debian](https://github.com/tiaastor/tiation-docker-debian)
+- [Tiation AI Platform](https://github.com/tiaastor/tiation-ai-platform)
+- [Tiation CMS](https://github.com/tiaastor/tiation-cms)
 
 ---
 
 <div align="center">
-  <p>Built with ❤️ by <a href="https://github.com/tiation">Tiation</a></p>
-  <p>⭐ Star this repository if it helped you!</p>
+  <img src="assets/footer-banner.png" alt="Tiation Enterprise Solutions" width="100%">
+  
+  **⭐ Star this repository if you find it helpful! ⭐**
+  
+  <a href="https://github.com/tiaastor/tiation-docker-debian">
+    <img src="https://img.shields.io/github/stars/tiaastor/tiation-docker-debian?style=social&label=Star&maxAge=2592000" alt="GitHub Stars">
+  </a>
+
+  <p><strong>Built with ❤️ and enterprise-grade standards by <a href="https://github.com/tiaastor">Tiation</a></strong></p>
 </div>
-
----
-
-## 🔮 Tiation Ecosystem
-
-This repository is part of the Tiation ecosystem. Explore related projects:
-
-- [🌟 TiaAstor](https://github.com/TiaAstor/TiaAstor) - Personal brand and story
-- [🐰 ChaseWhiteRabbit NGO](https://github.com/tiation/tiation-chase-white-rabbit-ngo) - Social impact initiatives
-- [🏗️ Infrastructure](https://github.com/tiation/tiation-rigger-infrastructure) - Enterprise infrastructure
-- [🤖 AI Agents](https://github.com/tiation/tiation-ai-agents) - Intelligent automation
-- [📝 CMS](https://github.com/tiation/tiation-cms) - Content management system
-- [⚡ Terminal Workflows](https://github.com/tiation/tiation-terminal-workflows) - Developer tools
-
----
-*Built with 💜 by the Tiation team*
