@@ -119,3 +119,26 @@ git checkout -b feature/your-feature-name
   Made with ❤️ by <a href="https://tiation.com">Tiation</a>
 </div>
 
+
+## 📚 Additional Resources
+
+- [FAQ](faq.md) - Frequently asked questions
+- [Troubleshooting](troubleshooting.md) - Common issues and solutions
+- [Contributing](../CONTRIBUTING.md) - How to contribute to this project
+- [License](../LICENSE) - Project license information
+
+## 🎨 Theme Information
+
+This project features a **dark neon theme** with:
+- Cyan gradient flares
+- Professional enterprise styling
+- Mobile-responsive design
+- Accessibility features
+
+## 🚀 Quick Links
+
+- [GitHub Repository](https://github.com/TiaAstor/tiation-docker-debian)
+- [Live Demo](https://tiaastor.github.io/tiation-docker-debian)
+- [Documentation](https://github.com/TiaAstor/tiation-docker-debian/wiki)
+- [Issues](https://github.com/TiaAstor/tiation-docker-debian/issues)
+
